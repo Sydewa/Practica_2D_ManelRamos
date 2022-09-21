@@ -19,14 +19,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    //cock and balls
+    //
     void FixedUpdate()
     {
         horizontal = Input.GetAxis("Horizontal");
         //El GetAxis hace que el movimiento sea un poco Smooth, para quitarlo deberiamos hacer GetAxisRaw, entonces es mas seco
-        //playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
+        playerTransform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
 
         //playerTransform.Translate(Vector3.right * horizontal * speed * Time.deltaTime, Space.World);
-        rb.velocity = new Vector2 (horizontal * speed, 0);
+        //rb.velocity = new Vector2 (horizontal * speed, 0);
     }
 }
