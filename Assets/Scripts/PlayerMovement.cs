@@ -76,13 +76,22 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(playerTransform.up * jumpForce);
             saltoDoble = 0;
+            
         }
         else if (Input.GetButtonDown("Jump") && saltoDoble == 0)
         {
             rb.AddForce(playerTransform.up * jumpForce);
             saltoDoble = 1;
+            
         }
-        
+    
+        if(isGrounded)
+        {
+            animator.SetBool("Jump", false);
+        }
+        else{
+            animator.SetBool("Jump", true);
+        }
 
     }
 

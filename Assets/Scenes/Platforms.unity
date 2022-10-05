@@ -255,7 +255,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 64
-  sensorRadius: 0.1
+  sensorRadius: 0.16
   saltoDoble: 1
 --- !u!212 &955726028
 SpriteRenderer:
@@ -801,7 +801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563399772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.404943, y: -3.42857, z: -10}
+  m_LocalPosition: {x: -6.7995267, y: -3.43658, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
