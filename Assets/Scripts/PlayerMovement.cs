@@ -64,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
         
        
         Jump();
+        //GameManager.Instance.RestarVidas();
+
+        Global.nivel = 1;
         
 
     }
