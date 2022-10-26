@@ -5,8 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public int vidas = 3;
-    public int puntos = 0;
 
     void Awake()
     {
@@ -23,9 +21,4 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    
-    public void RestarVidas()
-    {
-        vidas--;
-    }
 }
