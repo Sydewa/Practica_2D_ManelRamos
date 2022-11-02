@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+    public static PlayerMovement Instance;
     public float speed = 5.5f;
     public float jumpForce = 5.5f;
 
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Instance = this;
 
     }
 
@@ -104,6 +105,17 @@ public class PlayerMovement : MonoBehaviour
         {
             director.Play();
         }
+        if(other.gameObject.tag == "Estrella")
+        {
+            Destroy(other.gameObject);
+            GameManager.Instance.SumarEstrellas();
+            AudioManager.Instance.EstrellaSound();
+        }
         
+    }
+
+    public void Stop()
+    {
+        Destroy(this);
     }
 }

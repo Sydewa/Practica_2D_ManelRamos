@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cinematica
+  - Bomb
+  - Estrella
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - ground
-  - 
+  - Bomb
   - 
   - 
   - 
