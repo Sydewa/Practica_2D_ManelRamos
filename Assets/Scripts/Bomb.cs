@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             anim.SetBool("Explotar", true);
-            GameManager.Instance.ContadorVidas();
+            GameManager.Instance.ContadorVidasLoop();
             AudioManager.Instance.BombaSound();
         }
         StartCoroutine(GameObject.Find("Main Camera").GetComponent<CameraShake>().Shake());

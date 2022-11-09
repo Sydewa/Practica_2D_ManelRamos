@@ -11,11 +11,10 @@ public class GameManager : MonoBehaviour
 
     //Contador de vidas del canvas y cosas canvas
     public Text estrellas;
-    public GameObject vida1;
-    public GameObject vida2;
-    public GameObject vida3;
     public GameObject YouLost;
     public GameObject YouWon;
+
+    public GameObject[] vidasUI;
 
     void Awake()
     {
@@ -36,7 +35,7 @@ public class GameManager : MonoBehaviour
         estrellasNum = 0;
     }
    
-    public void ContadorVidas()
+    /*public void ContadorVidas()
     {
         vidas --;
         if(vidas == 2)
@@ -59,6 +58,27 @@ public class GameManager : MonoBehaviour
             vida2.SetActive(true);
             vida3.SetActive(true);
         }
+    }*/
+
+    //Contador de vidas pero con loop
+
+    public void ContadorVidasLoop()
+    {
+        vidas --;
+        if(vidas == 0)
+        {
+            YouLost.SetActive(true);
+            PlayerMovement.Instance.Stop();
+        }
+        foreach(GameObject vida in vidasUI)
+        {
+            if(vida.activeInHierarchy)
+            {
+                vida.SetActive(false);
+                return;
+            }
+        }
+        
     }
     public void SumarEstrellas()
     {
