@@ -19,7 +19,7 @@ public class Bomb : MonoBehaviour
             GameManager.Instance.ContadorVidas();
             AudioManager.Instance.BombaSound();
         }
-        
+        StartCoroutine(GameObject.Find("Main Camera").GetComponent<CameraShake>().Shake());
     }
     public void Destroy()
     {
